@@ -77,24 +77,25 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete("/api/notes/:id", async (req, res) => {
-    
-    console.log(req.body)
-    // returns {}
+  
+  fs.readFile('./db/db.json', 'utf8', (err, data) => {
 
-    fs.readFile('./db/db.json', 'utf8', (err, data) => {
-        const newData = JSON.parse(data)
-        // res.json(newData)
-       
-        console.log(newData)
-    })
+  })
 })
- 
+
+     // console.log(req.body)
+    // // returns {}
+    // fs.readFile('./db/db.json', 'utf8', (err, data) => {
+    //     const newData = JSON.parse(data)
+    //     // res.json(newData)
+    //     console.log(newData)
+
 
 
 
 
 // returns the homepage
-  app.get('/', (req, res) =>
+  app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
