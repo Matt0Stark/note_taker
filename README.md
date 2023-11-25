@@ -4,6 +4,8 @@
 
 This Note Taker project provided experience working with pre-existing front end code, while developing and testing connections in the back end. when opened, the app allows you to see previously created notes, and create and save new notes. currently, the delete button functionality is still in progress.
 
+The majority of my contribution to the project can be found in the server.js file.
+
 ## Screen Shots
 ![screenshot](./public/assets/images/noteTakerScreenShot.png)
 
