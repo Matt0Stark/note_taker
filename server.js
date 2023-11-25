@@ -11,13 +11,6 @@ app.use(express.static("public"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-
-// // returns homepage
-// app.get('/', (req, res) =>
-//   res.sendFile(path.join(__dirname, '/public/index.html'))
-// );
-
 // returns note page
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
@@ -81,26 +74,12 @@ app.delete("/api/notes/:id", async (req, res) => {
   fs.readFile('./db/db.json', 'utf8', (err, data) => {
 
   })
-})
-
-     // console.log(req.body)
-    // // returns {}
-    // fs.readFile('./db/db.json', 'utf8', (err, data) => {
-    //     const newData = JSON.parse(data)
-    //     // res.json(newData)
-    //     console.log(newData)
+});
 
 
-
-
-
-// returns the homepage
-  app.get('*', (req, res) =>
+app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
-
-
-
 
 
 // pseudo server
